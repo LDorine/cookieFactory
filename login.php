@@ -9,7 +9,7 @@ if($_POST) {
   }
 }
 
-if(empty($_SESSION['loginname'])) {
+if(isset($_SESSION['loginname'])) {
   header('Location: index.php');
 }
 

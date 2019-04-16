@@ -1,6 +1,12 @@
 <?php 
 require 'inc/head.php'; 
 
+
+if(empty($_SESSION['loginname'])) {
+  header('Location: login.php');
+}
+
+
 if(isset($_GET['add_to_cart'])) {
   if($_GET['add_to_cart'] == 32) {
     if(empty($_SESSION['m&m'])) {
