@@ -2,32 +2,38 @@
 require 'inc/head.php'; 
 
 
-if(empty($_SESSION['loginname'])) {
+if(!isset($_SESSION['loginname'])) {
   header('Location: login.php');
 }
 
+/*
+$_SESSION['m&m'];
+$_SESSION['chips'];
+$_SESSION['pecan'];
+$_SESSION['cookie'];
+*/
 
 if(isset($_GET['add_to_cart'])) {
   if($_GET['add_to_cart'] == 32) {
-    if(empty($_SESSION['m&m'])) {
+    if(!isset($_SESSION['m&m'])) {
       $_SESSION['m&m'] = 0;
     } else {
       $_SESSION['m&m'] ++;
     }
   } elseif($_GET['add_to_cart'] == 36) {
-    if(empty($_SESSION['chips'])) {
+    if(!isset($_SESSION['chips'])) {
       $_SESSION['chips'] = 0;
     } else {
       $_SESSION['chips'] ++;
     }
   } elseif($_GET['add_to_cart'] == 46) {
-    if(empty($_SESSION['pecan'])) {
+    if(!isset($_SESSION['pecan'])) {
       $_SESSION['pecan'] = 0;
     } else {
       $_SESSION['pecan'] ++;
     }
   } elseif($_GET['add_to_cart'] == 58) {
-    if(empty($_SESSION['cookie'])) {
+    if(!isset($_SESSION['cookie'])) {
       $_SESSION['cookie'] = 0;
     } else {
       $_SESSION['cookie'] ++;

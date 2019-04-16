@@ -48,7 +48,7 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid text-right">
-    <?php if(isset($_SESSION['loginname']) == NULL) : ?>
+    <?php if(empty($_SESSION['loginname'])) : ?>
     <strong>Hello Wilder !</strong>
     <?php else : ?>
     <strong>Hello <?= $_SESSION['loginname'];?></strong>
