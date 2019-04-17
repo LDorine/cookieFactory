@@ -1,5 +1,9 @@
 <?php require 'inc/head.php';
 
+if(!isset($_SESSION['loginname'])){
+  header('Location: login.php');
+}
+
 if(empty($_SESSION['m&m'])) {
   $_SESSION['m&m'] = 0;
 }

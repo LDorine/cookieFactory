@@ -9,6 +9,10 @@ if($_POST) {
   }
 }
 
+if(isset($_SESSION['loginname'])){
+  header('Location: index.php');
+}
+
 ?>
 <div class="container" style="margin-top:40px">
 <div class="row">
